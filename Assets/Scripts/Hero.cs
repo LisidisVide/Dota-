@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
+    [HideInInspector]
     public uint line;
+    public int price;
 
-    [SerializeField]
+    [SerializeField, Space]
     private float _speed;
     [SerializeField]
     private float _damage;
@@ -46,13 +48,14 @@ public class Hero : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Hero enemy) && enemy.IsEnemy != IsEnemy && enemy.line == line)
         {
             _currentEnemy = enemy;
         }
     }
+
 
     private void Attack()
     {

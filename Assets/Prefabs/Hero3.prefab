@@ -120,6 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf396119d4c96a4f8a30d23cd7ad60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  line: 0
+  price: 3
   _speed: 1
   _damage: 3
   _cooldown: 3
@@ -139,4 +141,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 0.5
